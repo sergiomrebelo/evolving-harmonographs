@@ -8,7 +8,7 @@ String path_target_image = "1647254962968/V.png";
 
 Population pop;
 PVector[][] grid;
-boolean show_phenotypes = false;
+boolean show_phenotypes = true;
 boolean show_fitness = true;
 
 void settings() {
@@ -50,6 +50,13 @@ void draw() {
       col = 0;
     }
   }
+  
+  fill(128);
+  textSize(14);
+  textAlign(LEFT, BOTTOM);
+  String s = "Generations: " + pop.getGenerations();
+  text(s, 30, height - 25);
+  
 }
 
 void keyReleased() {
